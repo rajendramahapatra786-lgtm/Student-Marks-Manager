@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Student Marks Manager</title>
@@ -13,29 +14,31 @@
 
 <body>
 
-<div class="container d-flex justify-content-center align-items-center min-vh-100">
-    <div class="card p-4 w-100">
-        <h2 class="text-center mb-3">🎓 Student Marks Manager</h2>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card p-4 w-100">
+            <h2 class="text-center mb-3">🎓 Student Marks Manager</h2>
 
-        <input type="text" id="name" class="form-control mb-2" placeholder="Student Name">
+            <input type="text" id="name" class="form-control mb-2" placeholder="Student Name">
 
-        <input type="number" id="roll" class="form-control mb-2" placeholder="Roll Number">
+            <input type="text" id="roll" class="form-control mb-2" placeholder="Roll Number" maxlength="12">
 
-        <input type="number" id="subjects" class="form-control mb-3" placeholder="Number of Subjects">
+            <input type="number" id="subjects" class="form-control mb-3" placeholder="Number of Subjects" min="1">
+           
+            <button class="btn btn-primary w-100 mb-3" onclick="createInputs()">Add Subjects</button>
 
-        <button class="btn btn-primary w-100 mb-3" onclick="createInputs()">Add Subjects</button>
+            <div id="marksContainer"></div>
 
-        <div id="marksContainer"></div>
+            <button class="btn btn-success w-100 mt-3" onclick="calculateResult()">Calculate Result</button>
 
-        <button class="btn btn-success w-100 mt-3" onclick="calculateResult()">Calculate Result</button>
-        <button class="btn btn-danger w-100 mt-2" onclick="resetAll()">Reset</button>
+            <button class="btn btn-danger w-100 mt-2" onclick="resetAll()">Reset</button>
 
-        <div id="result" class="mt-3"></div>
+            <div id="result" class="mt-3"></div>
 
-        <p class="text-center text-muted mt-3">Created by Rajendra</p>
+            <p class="text-center text-muted mt-3">Created by Rajendra</p>
+        </div>
     </div>
-</div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

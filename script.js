@@ -1,6 +1,8 @@
 let subjectsAdded = false;
 
+/* ===== CREATE SUBJECT INPUTS ===== */
 function createInputs() {
+
     const count = Number(document.getElementById("subjects").value);
     const container = document.getElementById("marksContainer");
 
@@ -14,14 +16,28 @@ function createInputs() {
 
     // for loop (exam important)
     for (let i = 1; i <= count; i++) {
+
         container.innerHTML += `
             <div class="row mb-2">
+
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Subject ${i} Name">
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        placeholder="Subject ${i} Name"
+                    >
                 </div>
+
                 <div class="col">
-                    <input type="number" class="form-control mark" placeholder="Marks" min="0" max="100">
+                    <input 
+                        type="number" 
+                        class="form-control mark" 
+                        placeholder="Marks" 
+                        min="0" 
+                        max="100"
+                    >
                 </div>
+
             </div>
         `;
     }
@@ -29,7 +45,9 @@ function createInputs() {
     subjectsAdded = true;
 }
 
+/* ===== CALCULATE RESULT ===== */
 function calculateResult() {
+
     const name = document.getElementById("name").value.trim();
     const roll = document.getElementById("roll").value.trim();
     const marks = document.querySelectorAll(".mark");
@@ -46,53 +64,173 @@ function calculateResult() {
 
     // while loop (exam important)
     while (i < marks.length) {
+
         const value = Number(marks[i].value);
 
-        if (marks[i].value === "" || value < 0 || value > 100) {
+        if (
+            marks[i].value === "" ||
+            value < 0 ||
+            value > 100
+        ) {
             alert("Enter valid marks");
             return;
         }
 
-        if (value < 30) failed = true;
+        if (value < 30) {
+            failed = true;
+        }
 
         total += value;
         i++;
     }
 
     const percentage = total / marks.length;
+
     let grade = "Fail";
     let status = "Fail ❌";
     let alertType = "danger";
 
     if (!failed) {
+
         status = "Pass ✅";
         alertType = "success";
 
-        if (percentage >= 90) grade = "A";
-        else if (percentage >= 75) grade = "B";
-        else if (percentage >= 60) grade = "C";
-        else if (percentage >= 40) grade = "D";
-        else status = "Fail ❌";
+        if (percentage >= 90) {
+            grade = "A";
+        }
+
+        else if (percentage >= 75) {
+            grade = "B";
+        }
+
+        else if (percentage >= 60) {
+            grade = "C";
+        }
+
+        else if (percentage >= 40) {
+            grade = "D";
+        }
+
+        else {
+            status = "Fail ❌";
+        }
     }
 
-    // Local Storage
-    localStorage.setItem("studentResult", JSON.stringify({
-        name, roll, total, percentage, grade, status
-    }));
+    /* ===== LOCAL STORAGE ===== */
+    localStorage.setItem(
+        "studentResult",
 
+        JSON.stringify({
+            name,
+            roll,
+            total,
+            percentage,
+            grade,
+            status
+        })
+    );
+
+    /* ===== RESULT UI ===== */
     resultDiv.innerHTML = `
         <div class="alert alert-${alertType}">
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Roll No:</strong> ${roll}</p>
-            <p><strong>Total Marks:</strong> ${total}</p>
-            <p><strong>Percentage:</strong> ${percentage.toFixed(2)}%</p>
-            <p><strong>Status:</strong> ${status}</p>
-            <p><strong>Grade:</strong> ${grade}</p>
+
+            <p>
+                <strong>Name:</strong> ${name}
+            </p>
+
+            <p>
+                <strong>Roll No:</strong> ${roll}
+            </p>
+
+            <p>
+                <strong>Total Marks:</strong> ${total}
+            </p>
+
+            <p>
+                <strong>Percentage:</strong> ${percentage.toFixed(2)}%
+            </p>
+
+            <p>
+                <strong>Status:</strong> ${status}
+            </p>
+
+            <p>
+                <strong>Grade:</strong> ${grade}
+            </p>
+
         </div>
     `;
 }
 
+/* ===== RESET FUNCTION ===== */
 function resetAll() {
+
     localStorage.clear();
     location.reload();
 }
+
+/* ===== INPUT VALIDATION ===== */
+
+const nameInput = document.getElementById("name");
+const rollInput = document.getElementById("roll");
+const subjectsInput = document.getElementById("subjects");
+
+/* ===== NAME VALIDATION ===== */
+/* Allow only letters and spaces */
+
+nameInput.addEventListener("keydown", e => {
+
+    if (
+        e.key === "Backspace" ||
+        e.key === "Delete" ||
+        e.key === "ArrowLeft" ||
+        e.key === "ArrowRight" ||
+        e.key === "Tab"
+    ) {
+        return;
+    }
+
+    if (!/^[a-zA-Z\s]$/.test(e.key)) {
+        e.preventDefault();
+    }
+});
+
+/* ===== ROLL NUMBER VALIDATION ===== */
+/* Allow only numbers */
+
+rollInput.addEventListener("keydown", e => {
+
+    if (
+        e.key === "Backspace" ||
+        e.key === "Delete" ||
+        e.key === "ArrowLeft" ||
+        e.key === "ArrowRight" ||
+        e.key === "Tab"
+    ) {
+        return;
+    }
+
+    if (!/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+    }
+});
+
+/* ===== SUBJECT COUNT VALIDATION ===== */
+/* Allow only numbers */
+
+subjectsInput.addEventListener("keydown", e => {
+
+    if (
+        e.key === "Backspace" ||
+        e.key === "Delete" ||
+        e.key === "ArrowLeft" ||
+        e.key === "ArrowRight" ||
+        e.key === "Tab"
+    ) {
+        return;
+    }
+
+    if (!/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+    }
+});
