@@ -132,34 +132,50 @@ function calculateResult() {
 
     /* ===== RESULT UI ===== */
     resultDiv.innerHTML = `
-        <div class="alert alert-${alertType}">
+    <div class="modern-result-card">
 
-            <p>
-                <strong>Name:</strong> ${name}
-            </p>
+        <div class="result-header">
+            🎓 Student Result
+        </div>
 
-            <p>
-                <strong>Roll No:</strong> ${roll}
-            </p>
+        <div class="result-body">
 
-            <p>
-                <strong>Total Marks:</strong> ${total}
-            </p>
+            <div class="result-item">
+                <span>Name</span>
+                <strong>${name}</strong>
+            </div>
 
-            <p>
-                <strong>Percentage:</strong> ${percentage.toFixed(2)}%
-            </p>
+            <div class="result-item">
+                <span>Roll No</span>
+                <strong>${roll}</strong>
+            </div>
 
-            <p>
-                <strong>Status:</strong> ${status}
-            </p>
+            <div class="result-item">
+                <span>Total Marks</span>
+                <strong>${total}</strong>
+            </div>
 
-            <p>
-                <strong>Grade:</strong> ${grade}
-            </p>
+            <div class="result-item">
+                <span>Percentage</span>
+                <strong>${percentage.toFixed(2)}%</strong>
+            </div>
+
+            <div class="result-item">
+                <span>Status</span>
+                <strong class="${failed ? 'fail-text' : 'pass-text'}">
+                    ${status}
+                </strong>
+            </div>
+
+            <div class="result-item">
+                <span>Grade</span>
+                <strong>${grade}</strong>
+            </div>
 
         </div>
-    `;
+
+    </div>
+`;
 }
 
 /* ===== RESET FUNCTION ===== */
