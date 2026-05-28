@@ -12,7 +12,7 @@ body {
 .card {
     max-width: 420px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 /* Inputs */
@@ -44,99 +44,160 @@ body {
     font-size: 12px;
 }
 
-/* ===== MODERN RESULT CARD ===== */
+/* ===== PREMIUM RESULT CARD ===== */
 
-.modern-result-card{
-    margin-top:20px;
-    padding:25px;
+.modern-result-card {
+    margin-top: 25px;
+    padding: 28px;
 
-    border-radius:20px;
+    border-radius: 28px;
 
-    background:rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.12);
 
-    backdrop-filter:blur(12px);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
-    border:1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
     box-shadow:
-        0 8px 32px rgba(0,0,0,0.25);
+        0 8px 32px rgba(31, 38, 135, 0.37),
+        inset 0 0 12px rgba(255, 255, 255, 0.08);
 
-    animation:resultPop 0.5s ease;
+    overflow: hidden;
+    position: relative;
+
+    animation: resultPop 0.6s ease;
+}
+
+/* Glow Effect */
+.modern-result-card::before {
+    content: "";
+
+    position: absolute;
+    top: -50%;
+    left: -50%;
+
+    width: 200%;
+    height: 200%;
+
+    background:
+        linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.08),
+            transparent);
+
+    transform: rotate(25deg);
+
+    animation: shine 5s linear infinite;
 }
 
 /* Header */
-.result-header{
-    text-align:center;
-    font-size:24px;
-    font-weight:bold;
-    margin-bottom:20px;
-    color:#222;
+.result-header {
+    text-align: center;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+    color: #222;
+
+    letter-spacing: 1px;
+
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 /* Body */
-.result-body{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
+.result-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    position: relative;
+    z-index: 2;
 }
 
-/* Each Row */
-.result-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+/* Result Rows */
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    padding:12px 15px;
+    padding: 15px 18px;
 
-    border-radius:12px;
+    border-radius: 16px;
 
-    background:rgba(255,255,255,0.35);
+    background: rgba(255, 255, 255, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
-    color:#222;
+    color: #222;
 
-    transition:0.3s;
+    transition: 0.35s ease;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-.result-item:hover{
-    transform:translateX(5px);
-    background:rgba(255,255,255,0.18);
+/* Hover Effect */
+.result-item:hover {
+    transform: translateY(-3px) scale(1.02);
+
+    background: rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
-/* Status Colors */
-.pass-text{
-    color:#00ff99;
+/* Labels */
+.result-item span {
+    font-size: 15px;
+    opacity: 0.9;
 }
 
-.fail-text{
-    color:#ff4d4d;
+/* Values */
+.result-item strong {
+    font-size: 17px;
+    font-weight: 700;
 }
 
-/* Animation */
-@keyframes resultPop{
+/* Pass */
+.pass-text {
+    color: #00ffb3;
 
-    from{
-        opacity:0;
-        transform:translateY(20px) scale(0.95);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
+    text-shadow:
+        0 0 10px rgba(0, 255, 179, 0.5);
 }
 
-/* 
-.alert {
-    animation: fadeIn 0.5s ease-in-out;
+/* Fail */
+.fail-text {
+    color: #ff5b5b;
+
+    text-shadow:
+        0 0 10px rgba(255, 91, 91, 0.5);
 }
 
-@keyframes fadeIn {
+/* Result Animation */
+@keyframes resultPop {
+
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(25px) scale(0.92);
     }
+
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
-} */
+}
+
+/* Shine Animation */
+@keyframes shine {
+
+    0% {
+        transform: translateX(-100%) rotate(25deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(25deg);
+    }
+}

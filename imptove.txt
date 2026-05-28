@@ -1,21 +1,6 @@
 # 🎓 Student Marks Manager — Professional Improvement Guide
 
----
 
-# 2️⃣ Better Result UI 🎨
-
-Current:
-🟡 Simple result card
-
-Upgrade:
-
-✅ Glassmorphism card
-✅ Better shadows
-✅ Better typography
-✅ Modern colors
-✅ Result animations
-
----
 
 # 3️⃣ Subject-wise Result Display 📚
 
