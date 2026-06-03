@@ -2,24 +2,7 @@
 
 
 
-# 3️⃣ Subject-wise Result Display 📚
 
-Current:
-❌ Only total marks shown
-
-Upgrade:
-
-Show:
-
-```plaintext
-Math → 90
-Science → 85
-English → 70
-```
-
-This makes the result more detailed and realistic.
-
----
 
 # 4️⃣ Pass/Fail Per Subject ✅❌
 

@@ -61,9 +61,15 @@ function calculateResult() {
     let total = 0;
     let failed = false;
     let i = 0;
+    let subjectResults = "";
 
     // while loop (exam important)
     while (i < marks.length) {
+
+
+        const subjectName =
+    document.querySelectorAll("#marksContainer input[type='text']")[i].value
+    || `Subject ${i + 1}`;
 
         const value = Number(marks[i].value);
 
@@ -81,6 +87,12 @@ function calculateResult() {
         }
 
         total += value;
+        subjectResults += `
+    <div class="result-item">
+        <span>${subjectName}</span>
+        <strong>${value}</strong>
+    </div>
+`;
         i++;
     }
 
@@ -154,6 +166,7 @@ function calculateResult() {
                 <span>Total Marks</span>
                 <strong>${total}</strong>
             </div>
+            ${subjectResults}
 
             <div class="result-item">
                 <span>Percentage</span>
