@@ -1,22 +1,6 @@
 # 🎓 Student Marks Manager — Professional Improvement Guide
 
 
-
-
-
-# 4️⃣ Pass/Fail Per Subject ✅❌
-
-Example:
-
-```plaintext
-Math → Pass ✅
-Physics → Fail ❌
-```
-
-This gives a real report-card feeling.
-
----
-
 # 5️⃣ Grade Color System 🌈
 
 ## Example

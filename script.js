@@ -68,8 +68,8 @@ function calculateResult() {
 
 
         const subjectName =
-    document.querySelectorAll("#marksContainer input[type='text']")[i].value
-    || `Subject ${i + 1}`;
+            document.querySelectorAll("#marksContainer input[type='text']")[i].value
+            || `Subject ${i + 1}`;
 
         const value = Number(marks[i].value);
 
@@ -82,16 +82,21 @@ function calculateResult() {
             return;
         }
 
-        if (value < 30) {
+        if (value < 33) {
             failed = true;
         }
 
         total += value;
+
         subjectResults += `
-    <div class="result-item">
-        <span>${subjectName}</span>
-        <strong>${value}</strong>
-    </div>
+<div class="result-item">
+    <span>${subjectName}</span>
+
+    <strong>
+        ${value}
+        ${value >= 33 ? "✅" : "❌"}
+    </strong>
+</div>
 `;
         i++;
     }
