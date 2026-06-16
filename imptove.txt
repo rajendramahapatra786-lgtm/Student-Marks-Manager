@@ -1,30 +1,5 @@
 # 🎓 Student Marks Manager — Professional Improvement Guide
 
-
-# 5️⃣ Grade Color System 🌈
-
-## Example
-
-### A Grade
-
-Green
-
-### B Grade
-
-Blue
-
-### C Grade
-
-Orange
-
-### Fail
-
-Red
-
-Improves visual experience.
-
----
-
 # 6️⃣ Percentage Circle Progress 📊
 
 Show:

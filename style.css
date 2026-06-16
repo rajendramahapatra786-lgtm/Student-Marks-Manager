@@ -180,6 +180,29 @@ body {
         0 0 10px rgba(255, 91, 91, 0.5);
 }
 
+/* Grade Colors */
+
+.grade-a {
+    color: #00c853; /* Green */
+    font-weight: bold;
+}
+
+.grade-b {
+    color: #2979ff; /* Blue */
+    font-weight: bold;
+}
+
+.grade-c {
+    color: #ff9800; /* Orange */
+    font-weight: bold;
+}
+
+.grade-fail {
+    color: #ff1744; /* Red */
+    font-weight: bold;
+}
+
+
 /* Result Animation */
 @keyframes resultPop {
 

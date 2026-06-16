@@ -106,30 +106,35 @@ function calculateResult() {
     let grade = "Fail";
     let status = "Fail ❌";
     let alertType = "danger";
+    let gradeClass = "grade-fail";
 
     if (!failed) {
 
         status = "Pass ✅";
-        alertType = "success";
 
         if (percentage >= 90) {
             grade = "A";
+            gradeClass = "grade-a";
         }
 
         else if (percentage >= 75) {
             grade = "B";
+            gradeClass = "grade-b";
         }
 
         else if (percentage >= 60) {
             grade = "C";
+            gradeClass = "grade-c";
         }
 
         else if (percentage >= 40) {
             grade = "D";
+            gradeClass = "grade-c";
         }
 
         else {
-            status = "Fail ❌";
+            grade = "Fail";
+            gradeClass = "grade-fail";
         }
     }
 
@@ -186,9 +191,11 @@ function calculateResult() {
             </div>
 
             <div class="result-item">
-                <span>Grade</span>
-                <strong>${grade}</strong>
-            </div>
+    <span>Grade</span>
+    <strong class="${gradeClass}">
+        ${grade}
+    </strong>
+</div>
 
         </div>
 
