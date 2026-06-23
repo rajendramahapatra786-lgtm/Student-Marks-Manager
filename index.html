@@ -23,7 +23,7 @@
             <input type="text" id="roll" class="form-control mb-2" placeholder="Roll Number" maxlength="12">
 
             <input type="number" id="subjects" class="form-control mb-3" placeholder="Number of Subjects" min="1">
-           
+
             <button class="btn btn-primary w-100 mb-3" onclick="createInputs()">Add Subjects</button>
 
             <div id="marksContainer"></div>
@@ -33,11 +33,17 @@
             <button class="btn btn-danger w-100 mt-2" onclick="resetAll()">Reset</button>
 
             <div id="result" class="mt-3"></div>
+            <button id="downloadPdf" class="btn btn-dark w-100 mt-2" onclick="downloadPDF()" style="display:none;">
+
+                Download Report Card PDF 📄
+
+            </button>
 
             <p class="text-center text-muted mt-3">Created by Rajendra</p>
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
 

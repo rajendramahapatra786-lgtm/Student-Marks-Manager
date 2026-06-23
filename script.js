@@ -1,4 +1,5 @@
 let subjectsAdded = false;
+let pdfData = {};
 
 /* ===== CREATE SUBJECT INPUTS ===== */
 function createInputs() {
@@ -62,6 +63,7 @@ function calculateResult() {
     let failed = false;
     let i = 0;
     let subjectResults = "";
+    let subjectList = [];
 
     // while loop (exam important)
     while (i < marks.length) {
@@ -87,6 +89,11 @@ function calculateResult() {
         }
 
         total += value;
+
+        subjectList.push({
+            subject: subjectName,
+            marks: value
+        });
 
         subjectResults += `
 <div class="result-item">
@@ -152,8 +159,18 @@ function calculateResult() {
         })
     );
 
+    pdfData = {
+        name,
+        roll,
+        total,
+        percentage,
+        grade,
+        status,
+        subjects: subjectList
+    };
+
     /* ===== RESULT UI ===== */
-    resultDiv.innerHTML = `
+    resultDiv.innerHTML = `    
     <div class="modern-result-card">
 
         <div class="result-header">
@@ -201,6 +218,9 @@ function calculateResult() {
 
     </div>
 `;
+
+    document.getElementById("downloadPdf").style.display = "block";
+
 }
 
 /* ===== RESET FUNCTION ===== */
@@ -275,3 +295,63 @@ subjectsInput.addEventListener("keydown", e => {
         e.preventDefault();
     }
 });
+
+/* ===== DOWNLOAD PDF ===== */
+
+function downloadPDF() {
+
+    const { jsPDF } = window.jspdf;
+
+    const doc = new jsPDF();
+
+    let y = 20;
+
+    doc.setFontSize(18);
+    doc.text("Student Report Card", 20, y);
+
+    y += 15;
+
+    doc.setFontSize(12);
+
+    doc.text(`Student Name: ${pdfData.name}`, 20, y);
+    y += 10;
+
+    doc.text(`Roll Number: ${pdfData.roll}`, 20, y);
+    y += 10;
+
+    doc.text(`Total Marks: ${pdfData.total}`, 20, y);
+    y += 10;
+
+    doc.text(
+        `Percentage: ${pdfData.percentage.toFixed(2)}%`,
+        20,
+        y
+    );
+
+    y += 10;
+
+    doc.text(`Grade: ${pdfData.grade}`, 20, y);
+
+    y += 10;
+
+    doc.text(`Status: ${pdfData.status}`, 20, y);
+
+    y += 20;
+
+    doc.text("Subjects:", 20, y);
+
+    y += 10;
+
+    pdfData.subjects.forEach((item) => {
+
+        doc.text(
+            `${item.subject} : ${item.marks}`,
+            25,
+            y
+        );
+
+        y += 10;
+    });
+
+    doc.save("Student_Report_Card.pdf");
+}
