@@ -1,6 +1,21 @@
 let subjectsAdded = false;
 let pdfData = {};
 
+function speak(message) {
+
+    window.speechSynthesis.cancel();
+
+    const speech =
+        new SpeechSynthesisUtterance();
+
+    speech.text = message;
+    speech.lang = "en-US";
+    speech.rate = 0.9;
+    speech.pitch = 1;
+
+    window.speechSynthesis.speak(speech);
+}
+
 /* ===== CREATE SUBJECT INPUTS ===== */
 function createInputs() {
 
@@ -115,7 +130,13 @@ function calculateResult() {
     let alertType = "danger";
     let gradeClass = "grade-fail";
 
+
+
     if (!failed) {
+
+        speak(
+            `Congratulations ${name}, you have passed successfully`
+        );
 
         status = "Pass ✅";
 
@@ -143,6 +164,12 @@ function calculateResult() {
             grade = "Fail";
             gradeClass = "grade-fail";
         }
+
+    } else {
+
+        speak(
+            `Sorry ${name}, you failed. Better luck next year`
+        );
     }
 
     /* ===== LOCAL STORAGE ===== */
