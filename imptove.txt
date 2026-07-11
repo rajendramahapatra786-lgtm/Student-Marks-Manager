@@ -1,19 +1,5 @@
 
 
-
-
-# 1️⃣1️⃣ Add Input Animations ✨
-
-When subject fields appear:
-
-✅ fade animation
-✅ slide animation
-✅ smooth transitions
-
-Makes UI feel modern.
-
----
-
 # 1️⃣2️⃣ Improve Alert System 🔔
 
 Current:
