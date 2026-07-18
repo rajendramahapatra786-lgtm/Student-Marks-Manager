@@ -1,0 +1,183 @@
+/* ==============================
+        GOOGLE FONT
+============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==============================
+        VARIABLES
+============================== */
+
+:root{
+
+    --primary:#6C4DFF;
+    --secondary:#3B82F6;
+
+    --bg:#0B1023;
+
+    --card:#151C42;
+
+    --card2:#1B2355;
+
+    --success:#22C55E;
+
+    --danger:#EF4444;
+
+    --warning:#F59E0B;
+
+    --text:#FFFFFF;
+
+    --text-light:#AAB4D6;
+
+    --border:rgba(255,255,255,.08);
+
+    --radius:22px;
+
+    --transition:.35s ease;
+
+    --shadow:0 15px 35px rgba(0,0,0,.28);
+
+}
+
+/* ==============================
+        RESET
+============================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+/* ==============================
+        HTML
+============================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ==============================
+        BODY
+============================== */
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#090D1E,#10173B,#171D48);
+    color:var(--text);
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+/* ==============================
+        LINKS
+============================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ==============================
+        IMAGE
+============================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+/* ==============================
+        BUTTON
+============================== */
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+/* ==============================
+        INPUT
+============================== */
+
+input{
+
+    border:none;
+
+    outline:none;
+
+    font-family:inherit;
+
+}
+
+/* ==============================
+        LIST
+============================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ==============================
+        SCROLLBAR
+============================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111734;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#5B6EFF;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#7B5DFF;
+
+}
+
+/* ==============================
+        SELECTION
+============================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}

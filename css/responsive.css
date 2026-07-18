@@ -1,0 +1,223 @@
+/* ==========================================
+            1400px
+========================================== */
+
+@media(max-width:1400px){
+
+    .dashboard{
+
+        grid-template-columns:360px 1fr;
+
+    }
+
+    .summary-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================================
+            1200px
+========================================== */
+
+@media(max-width:1200px){
+
+    .dashboard{
+
+        grid-template-columns:330px 1fr;
+
+        gap:18px;
+
+    }
+
+    .profile-right img{
+
+        width:150px;
+
+    }
+
+    .profile-avatar{
+
+        width:75px;
+
+        height:75px;
+
+        font-size:28px;
+
+    }
+
+}
+
+/* ==========================================
+            992px
+========================================== */
+
+@media(max-width:992px){
+
+    body{
+
+        overflow:auto;
+
+    }
+
+    .main-wrapper{
+
+        height:auto;
+
+        padding:15px;
+
+    }
+
+    .dashboard{
+
+        grid-template-columns:1fr;
+
+        height:auto;
+
+    }
+
+    .left-panel,
+    .right-panel{
+
+        height:auto;
+
+    }
+
+    .summary-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .profile-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .profile-left{
+
+        flex-direction:column;
+
+    }
+
+    .profile-right{
+
+        margin-top:20px;
+
+    }
+
+}
+
+/* ==========================================
+            768px
+========================================== */
+
+@media(max-width:768px){
+
+    .dashboard-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+    .download-btn{
+
+        width:100%;
+
+    }
+
+    .summary-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .subject-row{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .delete-btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================================
+            576px
+========================================== */
+
+@media(max-width:576px){
+
+    .main-wrapper{
+
+        padding:10px;
+
+    }
+
+    .left-panel,
+    .right-panel{
+
+        padding:18px;
+
+        border-radius:20px;
+
+    }
+
+    .logo-area{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .logo-box{
+
+        width:60px;
+
+        height:60px;
+
+    }
+
+    .logo-area h1{
+
+        font-size:18px;
+
+    }
+
+    .profile-avatar{
+
+        width:65px;
+
+        height:65px;
+
+        font-size:24px;
+
+    }
+
+    .summary-card{
+
+        min-height:120px;
+
+    }
+
+    .summary-card h2{
+
+        font-size:26px;
+
+    }
+
+}
