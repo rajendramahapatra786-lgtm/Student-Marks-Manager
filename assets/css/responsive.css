@@ -1,0 +1,241 @@
+/* ==========================================================
+                    LARGE DESKTOP
+========================================================== */
+
+@media (max-width: 1600px){
+
+    .app-container{
+
+        width:95%;
+
+    }
+
+}
+
+/* ==========================================================
+                    LAPTOP
+========================================================== */
+
+@media (max-width: 1200px){
+
+    .app-container.show-result{
+
+        grid-template-columns:45% 55%;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================================================
+                    TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .page-header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        text-align:center;
+
+    }
+
+    .header-left{
+
+        flex-direction:column;
+
+    }
+
+    .header-right{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+    .app-container.show-result{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #form-section{
+
+        max-width:100%;
+
+    }
+
+    #resultsection{
+
+        margin-top:30px;
+
+    }
+
+    .performance-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================================================
+                    MOBILE
+========================================================== */
+
+@media (max-width:768px){
+
+    body{
+
+        padding:15px;
+
+    }
+
+    .page-header{
+
+        padding:20px;
+
+    }
+
+    .title-box h1{
+
+        font-size:22px;
+
+    }
+
+    .title-box p{
+
+        font-size:13px;
+
+    }
+
+    .student-form-card{
+
+        padding:20px;
+
+    }
+
+    .profile-card{
+
+        padding:20px;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .action-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .student-avatar{
+
+        width:110px;
+
+        height:110px;
+
+    }
+
+    .percentage-circle{
+
+        width:160px;
+
+        height:160px;
+
+    }
+
+}
+
+/* ==========================================================
+                    SMALL MOBILE
+========================================================== */
+
+@media (max-width:480px){
+
+    .header-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .icon-btn{
+
+        width:45px;
+
+        height:45px;
+
+    }
+
+    .subject-count{
+
+        flex-direction:column;
+
+    }
+
+    .subject-count input{
+
+        width:100%;
+
+    }
+
+    .subject-count button{
+
+        width:100%;
+
+    }
+
+    .subject-row{
+
+        flex-direction:column;
+
+    }
+
+    .subject-input,
+
+    .marks-input{
+
+        width:100%;
+
+    }
+
+    .delete-subject{
+
+        width:100%;
+
+        margin-top:10px;
+
+    }
+
+    table{
+
+        display:block;
+
+        overflow-x:auto;
+
+    }
+
+    .loader-container{
+
+        width:95%;
+
+        padding:30px;
+
+    }
+
+}

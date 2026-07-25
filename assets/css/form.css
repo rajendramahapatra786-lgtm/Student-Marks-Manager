@@ -1,0 +1,518 @@
+/* ==========================================================
+                    LEFT PANEL
+========================================================== */
+
+#form-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+/* ==========================================================
+                    HEADER
+========================================================== */
+
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 35px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+.header-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.logo-box{
+    width:82px;
+    height:82px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:20px;
+    background:linear-gradient(135deg,#7e7bbb,#4c06f1);
+    box-shadow:0 12px 30px rgba(99,102,241,.25);
+}
+
+.logo-box i{
+    font-size:42px;
+    color:#fff;
+}
+
+.title-box h1{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+.title-box p{
+
+    margin-top:4px;
+
+    color:#64748B;
+
+    font-size:15px;
+
+}
+
+/* ==========================================================
+                HEADER BUTTONS
+========================================================== */
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.header-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 18px;
+
+    background:#ffffff;
+
+    border-radius:14px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.header-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.icon-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#ffffff;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.status-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#22C55E;
+
+}
+
+/* ==========================================================
+                STUDENT FORM CARD
+========================================================== */
+
+.student-form-card{
+
+    background:rgba(255,255,255,.80);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.card-header{
+
+    margin-bottom:25px;
+
+}
+
+.card-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.card-title i{
+
+    color:#6366F1;
+
+    font-size:24px;
+
+}
+
+.card-title h2{
+
+    font-size:25px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+                    FORM GROUP
+========================================================== */
+
+.form-group{
+
+    margin-bottom:22px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#F8FAFC;
+
+    border-radius:14px;
+
+    padding:14px 18px;
+
+    border:1px solid #E2E8F0;
+
+}
+
+.input-box i{
+
+    color:#6366F1;
+
+    font-size:18px;
+
+}
+
+.input-box input{
+
+    flex:1;
+
+    background:none;
+
+    font-size:16px;
+
+}
+
+/* ==========================================================
+                SUBJECT COUNT
+========================================================== */
+
+.subject-count{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.icon-box{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:12px;
+
+    background:#EEF2FF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#6366F1;
+
+}
+
+.subject-count input{
+
+    flex:1;
+
+    height:50px;
+
+    padding:0 15px;
+
+    border-radius:12px;
+
+    background:#F8FAFC;
+
+    border:1px solid #E2E8F0;
+
+}
+
+.subject-count button{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:12px;
+
+    background:#6366F1;
+
+    color:#fff;
+
+    font-size:18px;
+
+}
+
+.subjects-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:25px 0 20px;
+
+}
+
+.subjects-title i{
+
+    color:#6366F1;
+
+}
+
+/* ==========================================================
+                    BUTTONS
+========================================================== */
+
+.add-subject-btn,
+.calculate-btn,
+.reset-btn{
+
+    width:100%;
+
+    height:55px;
+
+    border-radius:14px;
+
+    margin-top:18px;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.add-subject-btn{
+
+    background:#8B5CF6;
+
+}
+
+.calculate-btn{
+
+    background:#6366F1;
+
+}
+
+.reset-btn{
+
+    background:#EF4444;
+
+}
+
+.add-subject-btn:hover,
+.calculate-btn:hover,
+.reset-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+
+}
+
+.subject-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:10px;
+
+}
+
+.subject-input{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#F8FAFC;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:14px;
+
+    padding: 15px;
+
+}
+
+.subject-input i{
+
+    color:#6366F1;
+
+    font-size:18px;
+
+}
+
+.subject-input input{
+
+    flex:1;
+
+    background:none;
+
+}
+
+
+.marks-box{
+
+    width:100px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:4px;
+
+    background:#F8FAFC;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:14px;
+
+    padding:12px;
+
+}
+
+.marks-box input{
+
+    width:35px;
+
+    text-align:right;
+
+    background:none;
+
+}
+
+.marks-box span{
+
+    color:#64748B;
+
+    font-weight:600;
+
+}
+
+.delete-subject{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:12px;
+
+    background:#FEF2F2;
+
+    color:#EF4444;
+
+    transition:.3s;
+
+}
+
+.delete-subject:hover{
+
+    background:#EF4444;
+
+    color:#fff;
+
+}

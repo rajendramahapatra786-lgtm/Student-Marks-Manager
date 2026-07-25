@@ -1,0 +1,630 @@
+/* ==========================================================
+                    RIGHT PANEL
+========================================================== */
+
+#resultSection{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+/* ==========================================================
+                    PROFILE CARD
+========================================================== */
+
+.profile-card{
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================================
+                    PROFILE HEADER
+========================================================== */
+
+.profile-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding-bottom:20px;
+
+    border-bottom:1px solid #E5E7EB;
+
+}
+
+.profile-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.profile-title i{
+
+    font-size:22px;
+
+    color:#6366F1;
+
+}
+
+.profile-title h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+.status-badge{
+
+    padding:8px 20px;
+
+    border-radius:999px;
+
+    background:#22C55E;
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+                    PROFILE BODY
+========================================================== */
+
+.profile-body{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+    padding-top:30px;
+
+}
+
+/* ==========================================================
+                    AVATAR
+========================================================== */
+
+.student-avatar{
+
+    width:110px;
+
+    height:110px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+}
+
+.student-avatar img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid #6366F1;
+
+}
+
+/* ==========================================================
+                    DETAILS
+========================================================== */
+
+.student-details{
+
+    flex:1;
+
+    text-align:left;
+
+}
+
+.student-details h2{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+    margin-bottom:10px;
+
+}
+
+.student-details p{
+
+    font-size:17px;
+
+    color:#64748B;
+
+}
+
+.student-details p span{
+
+    color:#2563EB;
+
+    font-weight:700;
+
+}
+
+.result-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:18px;
+
+}
+
+.result-status span:first-child{
+
+    color:#475569;
+
+    font-weight:500;
+
+}
+
+#resultStatusBadge{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+    padding:7px 18px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+                    TROPHY
+========================================================== */
+
+.trophy-box{
+
+    width:170px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.trophy-box img{
+
+    width:140px;
+
+    transition:.35s;
+
+}
+
+.trophy-box img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================================================
+                    STATS GRID
+========================================================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+.stat-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    padding:18px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.stat-icon{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:20px;
+
+    flex-shrink:0;
+
+}
+
+.total-icon{
+
+    background:#6366F1;
+
+}
+
+.percentage-icon{
+
+    background:#3B82F6;
+
+}
+
+.grade-icon{
+
+    background:#F59E0B;
+
+}
+
+.result-icon{
+
+    background:#EC4899;
+
+}
+
+.stat-content{
+
+    flex:1;
+
+}
+
+.stat-content h4{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#64748B;
+
+    margin-bottom:10px;
+
+}
+
+.stat-content h2{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+    line-height:1;
+
+}
+
+.stat-content p{
+
+    margin-top:8px;
+
+    font-size:13px;
+
+    color:#94A3B8;
+
+    font-weight:500;
+
+}
+
+/* ==========================================================
+                    CIRCLE
+========================================================== */
+
+.percentage-circle{
+
+    width:190px;
+
+    height:190px;
+
+    margin:25px auto;
+
+    position:relative;
+
+}
+
+.percentage-circle svg{
+
+    width:100%;
+
+    height:100%;
+
+    transform:rotate(-90deg);
+
+}
+
+.circle-bg{
+
+    fill:none;
+
+    stroke:#E5E7EB;
+
+    stroke-width:12;
+
+}
+
+.circle-progress{
+
+    fill:none;
+
+    stroke:#6366F1;
+
+    stroke-width:12;
+
+    stroke-linecap:round;
+
+    stroke-dasharray:440;
+
+    stroke-dashoffset:440;
+
+}
+
+.circle-text{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.circle-text h1{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+.circle-text span{
+
+    color:#64748B;
+
+}
+
+/* ==========================================================
+                    PERFORMANCE
+========================================================== */
+
+.performance-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:20px;
+
+    align-items:stretch;
+
+}
+.performance-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100%;
+
+}
+
+.performance-card .performance-header{
+
+    width:100%;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================================
+                    TABLE
+========================================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#EEF2FF;
+
+}
+
+th{
+
+    padding:15px;
+
+    text-align:left;
+
+    font-size:15px;
+
+    color:#475569;
+
+}
+
+td{
+
+    padding:15px;
+
+    border-bottom:1px solid #E5E7EB;
+
+}
+
+tbody tr:hover{
+
+    background:#F8FAFC;
+
+}
+
+tbody tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+/* ==========================================================
+                    ROW STATUS
+========================================================== */
+
+.excellent{
+
+    background:#ECFDF5;
+
+}
+
+.good{
+
+    background:#F8FAFC;
+
+}
+
+.failed{
+
+    background:#FEF2F2;
+
+}
+
+/* ==========================================================
+                    ACTION BUTTONS
+========================================================== */
+
+.action-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.action-btn{
+
+    flex:1;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#6366F1;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.action-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(99,102,241,.25);
+
+}
+
+.action-btn i{
+
+    font-size:18px;
+
+}
