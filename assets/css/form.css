@@ -18,13 +18,17 @@
 
 .page-header{
 
+    width:min(1600px,95%);
+
+    margin:12px auto;
+
     display:flex;
 
     justify-content:space-between;
 
     align-items:center;
 
-    padding:25px 35px;
+    padding:8px 20px;
 
     background:rgba(255,255,255,.75);
 
@@ -49,8 +53,8 @@
 }
 
 .logo-box{
-    width:82px;
-    height:82px;
+    width:60px;
+    height:60px;
 
     display:flex;
     justify-content:center;
@@ -62,13 +66,13 @@
 }
 
 .logo-box i{
-    font-size:42px;
+    font-size:30px;
     color:#fff;
 }
 
 .title-box h1{
 
-    font-size:28px;
+    font-size:22px;
 
     font-weight:700;
 
@@ -78,11 +82,11 @@
 
 .title-box p{
 
-    margin-top:4px;
+    margin-top:2px;
 
     color:#64748B;
 
-    font-size:15px;
+    font-size:13px;
 
 }
 
@@ -108,7 +112,7 @@
 
     gap:10px;
 
-    padding:12px 18px;
+    padding:8px 14px;
 
     background:#ffffff;
 
@@ -128,9 +132,9 @@
 
 .icon-btn{
 
-    width:48px;
+    width:42px;
 
-    height:48px;
+    height:42px;
 
     border-radius:50%;
 

@@ -59,9 +59,11 @@ body {
 
     color: var(--text);
 
+    min-height: 100vh;
+
     overflow-x: hidden;
 
-    min-height: 100vh;
+    overflow-y: auto;
 
     background:
         linear-gradient(135deg,
@@ -91,12 +93,11 @@ body {
 
 .app-container {
 
-    width: min(1600px, 95%);
-
-    margin: 40px auto;
+    width:min(1600px,95%);
+    margin:0 auto;
+    padding:0;
 
 }
-
 /* =====================================================
    GLASS CARD
 ===================================================== */
@@ -223,9 +224,9 @@ ul {
 
     width:100%;
 
-    margin-top:30px;
+    margin-top:10px;
 
-    padding:20px 0;
+    padding:8px 0;
 
     display:flex;
 
@@ -255,10 +256,3 @@ ul {
 
 }
 
-.app-container{
-
-    max-width:1500px;
-
-    margin:0 auto;
-
-}

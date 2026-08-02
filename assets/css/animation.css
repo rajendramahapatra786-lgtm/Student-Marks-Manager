@@ -23,7 +23,7 @@
 
     grid-template-columns: 1fr;
 
-    gap: 35px;
+    gap: 12px;
 
     align-items: start;
 
@@ -63,7 +63,7 @@
 
 .app-container.show-result {
 
-    grid-template-columns: 42% 58%;
+    grid-template-columns:38% 62%;
 
 }
 

@@ -10,14 +10,6 @@
 
     gap:25px;
 
-}
-
-/* ==========================================================
-                    PROFILE CARD
-========================================================== */
-
-.profile-card{
-
     background:rgba(255,255,255,.82);
 
     backdrop-filter:blur(20px);
@@ -29,6 +21,31 @@
     border:1px solid rgba(255,255,255,.35);
 
     box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+
+/* ==========================================================
+                    PROFILE CARD
+========================================================== */
+
+.profile-card{
+
+    /* background:rgba(255,255,255,.82); */
+
+    /* backdrop-filter:blur(20px); */
+
+    /* border-radius:24px; */
+
+    /* padding:30px; */
+
+    padding:0;
+
+    /* min-height:300px; */
+
+    /* border:1px solid rgba(255,255,255,.35); */
+
+    /* box-shadow:0 15px 40px rgba(0,0,0,.08); */
 
 }
 
@@ -118,30 +135,32 @@
 
 .student-avatar{
 
-    width:110px;
+    width:135px;
+    height:135px;
 
-    height:110px;
-
-    flex-shrink:0;
+    padding:4px;
 
     border-radius:50%;
 
-    overflow:hidden;
+    background:linear-gradient(135deg,#4F46E5,#A855F7);
 
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .student-avatar img{
 
     width:100%;
-
     height:100%;
-
-    object-fit:cover;
 
     border-radius:50%;
 
-    border:5px solid #6366F1;
+    object-fit:cover;
 
+    transform:scale(1.12);
+
+    border:4px solid #1319defc;
 }
 
 /* ==========================================================
@@ -224,9 +243,9 @@
 
 .trophy-box{
 
-    width:170px;
+    width:400px;      /* was 170px */
 
-    flex-shrink:0;
+    height:180px;     /* add this */
 
     display:flex;
 
@@ -234,16 +253,19 @@
 
     align-items:center;
 
+    flex-shrink:0;
+
 }
 
 .trophy-box img{
 
-    width:140px;
+    width:300px;      /* increase this */
 
-    transition:.35s;
+    height:auto;
+
+    object-fit:contain;
 
 }
-
 .trophy-box img:hover{
 
     transform:scale(1.05);
@@ -270,9 +292,12 @@
 
     align-items:flex-start;
 
-    gap:16px;
+    gap:18px;
 
-    padding:18px;
+    padding:22px;
+
+    min-height:145px;
+
 
     background:#fff;
 
@@ -340,6 +365,12 @@
 
     flex:1;
 
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
 }
 
 .stat-content h4{
@@ -348,9 +379,9 @@
 
     font-weight:600;
 
-    color:#64748B;
+    color:#1e73eb;
 
-    margin-bottom:10px;
+    margin-bottom:18px;
 
 }
 
@@ -360,19 +391,20 @@
 
     font-weight:700;
 
-    color:#1E293B;
+    color:#0b0f16;
 
     line-height:1;
 
+    margin-top:12px;
 }
 
 .stat-content p{
 
-    margin-top:8px;
+    margin-top:16px;
 
     font-size:13px;
 
-    color:#94A3B8;
+    color:#3c4046;
 
     font-weight:500;
 
