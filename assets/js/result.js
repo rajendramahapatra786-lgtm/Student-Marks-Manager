@@ -1,3 +1,4 @@
+const pageHeader = document.querySelector(".page-header");
 /* ==========================================================
                     RESULT CALCULATIONS
 ========================================================== */
@@ -211,6 +212,8 @@ function updateResultUI(data, result) {
 
     runDashboardAnimation(result);
 
+    showResultPanel();
+
 
 
 }
@@ -258,6 +261,11 @@ function showResultPanel() {
     document
         .querySelector(".app-container")
         .classList.add("show-result");
+
+    if (pageHeader) {
+        pageHeader.classList.add("show");
+    }
+
 }
 
 /* ==========================================================
@@ -268,16 +276,18 @@ function hideResultPanel() {
 
     const resultSection = document.getElementById("resultSection");
 
-    if (!resultSection) {
-        console.error("resultSection not found");
-        return;
-    }
+    if (!resultSection) return;
 
     resultSection.classList.add("hidden");
 
     document
         .querySelector(".app-container")
         .classList.remove("show-result");
+
+    if (pageHeader) {
+        pageHeader.classList.remove("show");
+    }
+
 }
 
 /* ==========================================================

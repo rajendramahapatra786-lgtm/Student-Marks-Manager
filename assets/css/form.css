@@ -15,31 +15,26 @@
 /* ==========================================================
                     HEADER
 ========================================================== */
-
 .page-header{
+    display:none;
 
     width:min(1600px,95%);
-
     margin:12px auto;
 
-    display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     padding:8px 20px;
 
     background:rgba(255,255,255,.75);
-
     backdrop-filter:blur(18px);
 
     border-radius:22px;
-
     border:1px solid rgba(255,255,255,.35);
-
     box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
 
+.page-header.show{
+    display:flex;
 }
 
 .header-left{

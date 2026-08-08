@@ -36,7 +36,7 @@ function createDefaultSubjects() {
 
     subjects = [];
 
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 2; i++) {
 
         subjects.push({
 
