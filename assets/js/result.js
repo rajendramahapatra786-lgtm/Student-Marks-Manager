@@ -207,6 +207,8 @@ function updateResultUI(data, result) {
     checkTopper(result);
 
     generateSubjectTable(data.subjects);
+    
+    syncPerformanceCards();
 
     announceResult(data, result);
 
@@ -308,39 +310,58 @@ function refreshResultAnimation() {
                 SUBJECT RESULT TABLE
 ========================================================== */
 
-const subjectTableBody = document.getElementById("subjectTableBody");
+const subjectPerformanceList = document.getElementById("subjectPerformanceList");
 
 function generateSubjectTable(subjects) {
 
-    subjectTableBody.innerHTML = "";
+    subjectPerformanceList.innerHTML = "";
 
-    subjects.forEach((subject) => {
+    subjects.forEach(subject => {
 
         const marks = Number(subject.marks);
+        const isFail = marks < 30;
 
-        const status = marks >= 35 ? "PASS" : "FAIL";
+        subjectPerformanceList.innerHTML += `
+            <div class="subject-row">
 
-        const row = document.createElement("tr");
+                <div class="subject-name">
 
-        row.innerHTML = `
-            <td>${subject.name}</td>
-            <td>${marks}</td>
-            <td>${status}</td>
+                    <div class="subject-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+
+                    <span>${subject.name}</span>
+
+                </div>
+
+                <div class="subject-marks">
+                    ${marks} / 100
+                </div>
+
+                <div class="subject-progress">
+
+                    <div class="progress-track">
+
+                        <div
+                            class="progress-fill ${isFail ? "fail" : ""}"
+                            style="width:${marks}%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="subject-percent">
+                    ${marks}%
+                </div>
+
+            </div>
         `;
-
-        if (marks >= 80) {
-            row.classList.add("excellent");
-        } else if (marks >= 35) {
-            row.classList.add("good");
-        } else {
-            row.classList.add("failed");
-        }
-
-        subjectTableBody.appendChild(row);
-
     });
 
 }
+
+
 
 /* ==========================================================
                 CIRCULAR PROGRESS
@@ -552,4 +573,30 @@ function clearResultUI() {
 
 }
 
+// ==========================================================
+// Sync Performance Cards Height
+// ==========================================================
 
+const performanceCard = document.querySelector(".performance-card");
+const percentageCardElement = document.querySelector(".percentage-card");
+
+function syncPerformanceCards() {
+    if (!performanceCard || !percentageCardElement) return;
+
+    // Mobile layout
+    if (window.innerWidth <= 768) {
+        percentageCardElement.style.height = "auto";
+        return;
+    }
+
+    percentageCardElement.style.height = `${performanceCard.getBoundingClientRect().height}px`;
+}
+
+// Watch for any height change in the left card
+if (performanceCard && percentageCardElement) {
+    const observer = new ResizeObserver(syncPerformanceCards);
+    observer.observe(performanceCard);
+}
+
+// Window resize
+window.addEventListener("resize", syncPerformanceCards);

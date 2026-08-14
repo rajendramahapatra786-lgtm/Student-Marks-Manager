@@ -450,73 +450,63 @@
 
                 <!-- Subject Result Table -->
 
-                <div class="table-card">
+                <div class="performance-card">
 
                     <div class="performance-header">
-
-                        <i class="fa-solid fa-table-list"></i>
-
-                        <h3>Subject Results</h3>
-
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        <h3>Subject Performance</h3>
                     </div>
 
-                    <table>
+                    <div id="subjectPerformanceList" class="subject-performance-list">
 
-                        <thead>
-
-                            <tr>
-
-                                <th>Subject</th>
-
-                                <th>Marks</th>
-
-                                <th>Status</th>
-
-                            </tr>
-
-                        </thead>
-
-                        <tbody id="subjectTableBody">
-
-                        </tbody>
-
-                    </table>
+                    </div>
 
                 </div>
 
                 <!-- Percentage Circle -->
 
-                <div class="percentage-circle">
+                <div class="percentage-card">
 
-                    <svg width="180" height="180">
+                    <div class="circle-title">
+                        Performance Overview
+                    </div>
 
-                        <circle class="circle-bg" cx="90" cy="90" r="70">
-                        </circle>
+                    <div class="percentage-circle">
 
-                        <circle id="progressCircle" class="circle-progress" cx="90" cy="90" r="70">
-                        </circle>
+                        <svg viewBox="0 0 220 220">
 
-                    </svg>
+                            <circle class="circle-bg" cx="110" cy="110" r="80">
+                            </circle>
 
-                    <div class="circle-text">
+                            <circle id="progressCircle" class="circle-progress" cx="110" cy="110" r="80">
+                            </circle>
 
-                        <h1 id="progressText">
-                            0%
-                        </h1>
+                        </svg>
 
-                        <span>Percentage</span>
+                        <div class="circle-text">
+
+                            <h1 id="progressText">0%</h1>
+
+                            <span>Overall</span>
+
+                        </div>
 
                     </div>
 
-                    <p>Outstanding Performance!</p>
+                    <div class="performance-message">
 
-                    <p></p>Keep up the excellent work.</p>
+                        <h4 id="performanceTitle">
+                            Outstanding Performance!
+                        </h4>
+
+                        
+
+                    </div>
 
                 </div>
 
             </section>
 
-            <!-- Bottom Buttons -->
             <!-- ================= ACTION BUTTONS ================= -->
 
             <section class="action-buttons">
