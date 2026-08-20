@@ -168,8 +168,10 @@ const gradeCard = document.getElementById("grade");
 
 const statusCard = document.getElementById("status");
 
-const remarkCard = document.getElementById("remark");
-
+const percentageRemark = document.getElementById("percentageRemark");
+const gradeRemark = document.getElementById("gradeRemark");
+const statusRemark = document.getElementById("statusRemark");
+const performanceTitle = document.getElementById("performanceTitle");
 const circleProgress = document.getElementById("progressCircle");
 
 const circleText = document.getElementById("progressText");
@@ -186,19 +188,55 @@ function updateResultUI(data, result) {
 
     totalMarksCard.textContent = result.totalMarks;
 
-    totalMarksOutOf.textContent = "/" + (data.subjects.length * 100);
+    totalMarksOutOf.textContent =
+        "/" + (data.subjects.length * 100);
 
-    percentageCard.textContent = result.percentage.toFixed(2) + "%";
+    percentageCard.textContent =
+        result.percentage.toFixed(2) + "%";
 
     gradeCard.textContent = result.grade;
 
-    statusCard.textContent = result.pass ? "PASS" : "FAIL";
+    statusCard.textContent =
+        result.pass ? "PASS" : "FAIL";
 
-    if (remarkCard) {
-        remarkCard.textContent = result.remark;
+
+    /* =========================================
+                    DYNAMIC REMARKS
+       ========================================= */
+
+    const remark = result.remark;
+
+    if (percentageRemark) {
+        percentageRemark.textContent = remark;
     }
 
+    if (gradeRemark) {
+        gradeRemark.textContent = remark;
+    }
+
+    if (statusRemark) {
+        statusRemark.textContent =
+            result.pass ? "Passed" : "Needs Improvement";
+    }
+
+    if (performanceTitle) {
+        performanceTitle.textContent =
+            result.pass
+                ? remark + "!"
+                : "Needs Improvement!";
+    }
+
+
+    /* =========================================
+                    DYNAMIC BADGE
+       ========================================= */
+
     updateBadge(result.pass);
+
+
+    /* =========================================
+                    PROGRESS
+       ========================================= */
 
     animateProgress(result.percentage);
 
@@ -207,7 +245,7 @@ function updateResultUI(data, result) {
     checkTopper(result);
 
     generateSubjectTable(data.subjects);
-    
+
     syncPerformanceCards();
 
     announceResult(data, result);
@@ -215,10 +253,8 @@ function updateResultUI(data, result) {
     runDashboardAnimation(result);
 
     showResultPanel();
-
-
-
 }
+
 
 /* ==========================================================
                 PASS / FAIL BADGE
@@ -226,26 +262,37 @@ function updateResultUI(data, result) {
 
 function updateBadge(pass) {
 
+    const resultStatusBadge =
+        document.getElementById("resultStatusBadge");
+
     if (pass) {
 
         resultBadge.textContent = "PASS";
 
         resultBadge.classList.remove("fail");
-
         resultBadge.classList.add("pass");
 
-    }
+        if (resultStatusBadge) {
+            resultStatusBadge.textContent = "PASS";
 
-    else {
+            resultStatusBadge.classList.remove("fail");
+            resultStatusBadge.classList.add("pass");
+        }
+
+    } else {
 
         resultBadge.textContent = "FAIL";
 
         resultBadge.classList.remove("pass");
-
         resultBadge.classList.add("fail");
 
-    }
+        if (resultStatusBadge) {
+            resultStatusBadge.textContent = "FAIL";
 
+            resultStatusBadge.classList.remove("pass");
+            resultStatusBadge.classList.add("fail");
+        }
+    }
 }
 
 /* ==========================================================
@@ -319,7 +366,7 @@ function generateSubjectTable(subjects) {
     subjects.forEach(subject => {
 
         const marks = Number(subject.marks);
-        const isFail = marks < 30;
+        const isFail = marks < 35;
 
         subjectPerformanceList.innerHTML += `
             <div class="subject-row">
@@ -565,12 +612,66 @@ function clearResultUI() {
 
     statusCard.textContent = "-";
 
-    remarkCard.textContent = "-";
+
+    if (percentageRemark) {
+        percentageRemark.textContent = "-";
+    }
+
+    if (gradeRemark) {
+        gradeRemark.textContent = "-";
+    }
+
+    if (statusRemark) {
+        statusRemark.textContent = "-";
+    }
+
+    if (performanceTitle) {
+        performanceTitle.textContent =
+            "Performance Overview";
+    }
+
+
+    /* Reset top PASS/FAIL badge */
+
+    if (resultBadge) {
+        resultBadge.textContent = "PASS";
+
+        resultBadge.classList.remove("pass");
+        resultBadge.classList.remove("fail");
+    }
+
+
+    /* Reset profile status badge */
+
+    const resultStatusBadge =
+        document.getElementById("resultStatusBadge");
+
+    if (resultStatusBadge) {
+
+        resultStatusBadge.textContent = "PASS";
+
+        resultStatusBadge.classList.remove("pass");
+        resultStatusBadge.classList.remove("fail");
+    }
+
+
+    /* Reset progress */
 
     circleText.textContent = "0%";
 
-    subjectTableBody.innerHTML = "";
+    circleProgress.classList.remove(
+        "excellent",
+        "good",
+        "average",
+        "poor"
+    );
 
+
+    /* Reset subject performance */
+
+    if (subjectPerformanceList) {
+        subjectPerformanceList.innerHTML = "";
+    }
 }
 
 // ==========================================================
