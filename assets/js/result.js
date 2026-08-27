@@ -501,7 +501,7 @@ function checkTopper(result) {
                 RESULT ACTION BUTTONS
 ========================================================== */
 
-const printBtn = document.getElementById("printBtn");
+const homeBtn = document.getElementById("homeBtn");
 const pdfBtn = document.getElementById("downloadBtn");
 const shareBtn = document.getElementById("shareBtn");
 
@@ -531,14 +531,14 @@ function announceResult(data, result) {
 }
 
 /* ==========================================================
-                PRINT RESULT
+                HOME BUTTON
 ========================================================== */
 
-printBtn.addEventListener("click", () => {
-
-    window.print();
-
-});
+if (homeBtn) {
+    homeBtn.addEventListener("click", () => {
+        window.location.href = "index.html";
+    });
+}
 
 /* ==========================================================
                 DOWNLOAD PDF
