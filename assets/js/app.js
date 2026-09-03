@@ -17,13 +17,9 @@ function initializeApp() {
     console.log("Student Marks Manager Started");
 
     initializeTheme();
-
     initializeSpeech();
-
     loadSavedForm();
-
     hideLoader();
-
     hideResultPanel();
 
 }
@@ -34,15 +30,14 @@ function initializeApp() {
 
 function initializeTheme() {
 
-    const savedTheme = localStorage.getItem("theme");
+    const savedTheme = localStorage.getItem("theme") || "light";
 
-    if (savedTheme) {
+    document.body.setAttribute("data-theme", savedTheme);
 
-        document.body.setAttribute("data-theme", savedTheme);
-
-    }
+    updateThemeIcon(savedTheme);
 
 }
+
 
 /* ==========================================================
                     THEME BUTTON
@@ -50,19 +45,52 @@ function initializeTheme() {
 
 const themeToggle = document.getElementById("themeToggle");
 
-themeToggle.addEventListener("click", () => {
+if (themeToggle) {
 
-    const currentTheme =
-        document.body.getAttribute("data-theme");
+    themeToggle.addEventListener("click", () => {
 
-    const nextTheme =
-        currentTheme === "dark" ? "light" : "dark";
+        const currentTheme =
+            document.body.getAttribute("data-theme") || "light";
 
-    document.body.setAttribute("data-theme", nextTheme);
+        const nextTheme =
+            currentTheme === "dark" ? "light" : "dark";
 
-    localStorage.setItem("theme", nextTheme);
+        document.body.setAttribute("data-theme", nextTheme);
 
-});
+        localStorage.setItem("theme", nextTheme);
+
+        updateThemeIcon(nextTheme);
+
+    });
+
+}
+
+
+/* ==========================================================
+                    UPDATE THEME ICON
+========================================================== */
+
+function updateThemeIcon(theme) {
+
+    const icon = document.querySelector("#themeToggle i");
+
+    if (!icon) return;
+
+    if (theme === "dark") {
+
+        icon.classList.remove("fa-moon");
+
+        icon.classList.add("fa-sun");
+
+    } else {
+
+        icon.classList.remove("fa-sun");
+
+        icon.classList.add("fa-moon");
+
+    }
+
+}
 
 /* ==========================================================
                     SPEECH INIT

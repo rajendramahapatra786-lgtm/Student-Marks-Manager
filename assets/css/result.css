@@ -855,7 +855,296 @@ SUBJECT PERFORMANCE
 
 }
 
+/* ==========================================================
+                    DARK MODE - RESULT
+========================================================== */
 
+
+/* Result panel */
+
+body[data-theme="dark"] #resultSection {
+
+    background: rgba(15, 23, 42, .84);
+
+    border-color: rgba(148, 163, 184, .18);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .35);
+
+}
+
+
+/* Profile header */
+
+body[data-theme="dark"] .profile-header {
+
+    border-bottom-color: #334155;
+
+}
+
+
+/* Profile title */
+
+body[data-theme="dark"] .profile-title h2 {
+
+    color: #F8FAFC;
+
+}
+
+
+/* Student name */
+
+body[data-theme="dark"] .student-details h2 {
+
+    color: #F8FAFC;
+
+}
+
+
+/* Roll number text */
+
+body[data-theme="dark"] .student-details p {
+
+    color: #94A3B8;
+
+}
+
+
+/* Roll number */
+
+body[data-theme="dark"] .student-details p span {
+
+    color: #60A5FA;
+
+}
+
+
+/* Result status label */
+
+body[data-theme="dark"] .result-status span:first-child {
+
+    color: #CBD5E1;
+
+}
+
+
+/* PASS status */
+
+body[data-theme="dark"] #resultStatusBadge.pass {
+
+    background: #064E3B;
+
+    color: #6EE7B7;
+
+}
+
+
+/* FAIL status */
+
+body[data-theme="dark"] #resultStatusBadge.fail {
+
+    background: #450A0A;
+
+    color: #FCA5A5;
+
+}
+
+
+/* ==========================================================
+                    STAT CARDS
+========================================================== */
+
+body[data-theme="dark"] .stat-card {
+
+    background: #1E293B;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .30);
+
+}
+
+
+body[data-theme="dark"] .stat-content h4 {
+
+    color: #60A5FA;
+
+}
+
+
+body[data-theme="dark"] .stat-content h2 {
+
+    color: #F8FAFC;
+
+}
+
+
+body[data-theme="dark"] .stat-content p {
+
+    color: #94A3B8;
+
+}
+
+
+/* ==========================================================
+                    PERFORMANCE OVERVIEW
+========================================================== */
+
+body[data-theme="dark"] .percentage-card {
+
+    background: #1E293B;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, .30);
+
+}
+
+
+body[data-theme="dark"] .circle-title {
+
+    color: #F8FAFC;
+
+}
+
+
+body[data-theme="dark"] .circle-bg {
+
+    stroke: #334155;
+
+}
+
+
+body[data-theme="dark"] .circle-text h1 {
+
+    color: #F8FAFC;
+
+}
+
+
+body[data-theme="dark"] .circle-text span {
+
+    color: #94A3B8;
+
+}
+
+
+/* Performance message */
+
+body[data-theme="dark"] .performance-message {
+
+    background: #292052;
+
+}
+
+
+body[data-theme="dark"] .performance-message h4 {
+
+    color: #A5B4FC;
+
+}
+
+
+body[data-theme="dark"] .performance-message p {
+
+    color: #CBD5E1;
+
+}
+
+
+/* ==========================================================
+                    SUBJECT PERFORMANCE
+========================================================== */
+
+body[data-theme="dark"] .performance-card {
+
+    background: #1E293B;
+
+    border-color: #334155;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, .30);
+
+}
+
+
+body[data-theme="dark"] .performance-header h3 {
+
+    color: #F8FAFC;
+
+}
+
+
+body[data-theme="dark"] .subject-row {
+
+    border-bottom-color: #334155;
+
+}
+
+
+body[data-theme="dark"] .subject-row:hover {
+
+    background: #263449;
+
+}
+
+
+body[data-theme="dark"] .subject-name {
+
+    color: #E5E7EB;
+
+}
+
+
+body[data-theme="dark"] .subject-icon {
+
+    background: #312E81;
+
+    color: #A5B4FC;
+
+}
+
+
+body[data-theme="dark"] .subject-marks {
+
+    color: #CBD5E1;
+
+}
+
+
+body[data-theme="dark"] .subject-percent {
+
+    color: #F8FAFC;
+
+}
+
+
+body[data-theme="dark"] .progress-track {
+
+    background: #334155;
+
+}
+
+
+/* Result row states */
+
+body[data-theme="dark"] .excellent {
+
+    background: #052E24;
+
+}
+
+
+body[data-theme="dark"] .good {
+
+    background: #1E293B;
+
+}
+
+
+body[data-theme="dark"] .failed {
+
+    background: #3B1111;
+
+}
 
 
 

@@ -515,3 +515,169 @@
     color:#fff;
 
 }
+
+
+/* ==========================================================
+                    DARK MODE - FORM
+========================================================== */
+
+body[data-theme="dark"] .page-header {
+
+    background: rgba(15, 23, 42, .82);
+
+    border-color: rgba(148, 163, 184, .18);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, .35);
+
+}
+
+
+/* Header title */
+
+body[data-theme="dark"] .title-box h1 {
+    color: #F8FAFC;
+}
+
+body[data-theme="dark"] .title-box p {
+    color: #94A3B8;
+}
+
+
+/* Header buttons */
+
+body[data-theme="dark"] .header-btn,
+body[data-theme="dark"] .icon-btn {
+
+    background: #1E293B;
+
+    color: #E5E7EB;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, .30);
+
+}
+
+body[data-theme="dark"] .header-btn strong {
+    color: #E5E7EB;
+}
+
+
+/* Theme icon */
+
+body[data-theme="dark"] .icon-btn i {
+    color: #FBBF24;
+}
+
+
+/* Student form card */
+
+body[data-theme="dark"] .student-form-card {
+
+    background: rgba(15, 23, 42, .84);
+
+    border-color: rgba(148, 163, 184, .18);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .35);
+
+}
+
+
+/* Card title */
+
+body[data-theme="dark"] .card-title h2,
+body[data-theme="dark"] .subjects-title h3 {
+
+    color: #F8FAFC;
+
+}
+
+
+/* Labels */
+
+body[data-theme="dark"] .form-group label {
+
+    color: #E5E7EB;
+
+}
+
+
+/* Input boxes */
+
+body[data-theme="dark"] .input-box,
+body[data-theme="dark"] .subject-count input,
+body[data-theme="dark"] .subject-input,
+body[data-theme="dark"] .marks-box {
+
+    background: #1E293B;
+
+    border-color: #334155;
+
+}
+
+
+/* Inputs */
+
+body[data-theme="dark"] .input-box input,
+body[data-theme="dark"] .subject-count input,
+body[data-theme="dark"] .subject-input input,
+body[data-theme="dark"] .marks-box input {
+
+    color: #F8FAFC;
+
+}
+
+
+/* Placeholder */
+
+body[data-theme="dark"] input::placeholder {
+
+    color: #64748B;
+
+}
+
+
+/* Subject count icon */
+
+body[data-theme="dark"] .icon-box {
+
+    background: #312E81;
+
+    color: #A5B4FC;
+
+}
+
+
+/* Marks /100 */
+
+body[data-theme="dark"] .marks-box span {
+
+    color: #CBD5E1;
+
+}
+
+
+/* Delete button */
+
+body[data-theme="dark"] .delete-subject {
+
+    background: #3F1D1D;
+
+    color: #F87171;
+
+}
+
+
+/* Focus */
+
+body[data-theme="dark"] .input-box:focus-within,
+body[data-theme="dark"] .subject-input:focus-within,
+body[data-theme="dark"] .marks-box:focus-within {
+
+    border-color: #6366F1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, .15);
+
+}
