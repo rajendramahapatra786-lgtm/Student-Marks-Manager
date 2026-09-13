@@ -1,3 +1,5 @@
+# IT WAS JUST A LOGIC .
+
 def calculate_grade(avg):
     if avg >= 90:
         return "A"
@@ -33,5 +35,4 @@ def student_mark_manager():
     print("Average:", average)
     print("Grade:", grade)
 
-student_mark_manager()
-
+student_mark_managers
