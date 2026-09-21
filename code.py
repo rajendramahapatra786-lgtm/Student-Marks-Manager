@@ -28,11 +28,11 @@ def student_mark_manager():
     average = total / subjects
     grade = calculate_grade(average)
 
-    # print("\n--- Student Report ---")
-    # print("Name:", name)
-    # print("Roll No:", roll)
-    # print("Total Marks:", total)
-    # print("Average:", average)
-    # print("Grade:", grade)
+    print("\n--- Student Report ---")
+    print("Name:", name)
+    print("Roll No:", roll)
+    print("Total Marks:", total)
+    print("Average:", average)
+    print("Grade:", grade)
 
-student_mark_managers
+# student_mark_managers
