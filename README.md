@@ -502,11 +502,5 @@ B.Tech — Computer Science & Engineering
 
 If you find this project useful or are using it as a learning reference, consider giving the repository a ⭐ on GitHub.
 
----
-
-## 📄 License
-
-This project is intended for educational and portfolio purposes.
-
 
 
