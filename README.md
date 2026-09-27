@@ -490,17 +490,8 @@ This makes it useful as a portfolio project for demonstrating frontend developme
 
 **Rajendra Mahapatra**
 
-B.Tech — Computer Science & Engineering
 
-### Skills Demonstrated
 
-`HTML` `CSS` `JavaScript` `Python` `Git` `GitHub` `Bootstrap`
-
----
-
-## ⭐ Support
-
-If you find this project useful or are using it as a learning reference, consider giving the repository a ⭐ on GitHub.
 
 
 
