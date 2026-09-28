@@ -379,16 +379,9 @@ The application will open in your browser.
 
 ---
 
-## 🌐 External Resources
 
-The project currently loads some frontend resources through external CDNs:
 
-- Google Fonts — Poppins
-- Font Awesome
 
-An internet connection may therefore be required for those external resources to load correctly when running the project directly.
-
----
 
 ## 🔐 Privacy
 
