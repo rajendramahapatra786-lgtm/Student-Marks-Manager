@@ -486,7 +486,7 @@ This makes it useful as a portfolio project for demonstrating frontend developme
 ---
 ## ⭐ Support
 
-****If you found this project useful, consider giving the repository a star!**
+**If you found this project useful, consider giving the repository a star!**
 
 
 
