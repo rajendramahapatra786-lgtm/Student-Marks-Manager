@@ -389,8 +389,6 @@ This is a frontend-only application.
 
 Student form data is stored locally in the user's browser using LocalStorage. The project does not require a backend server or external database for its core functionality.
 
-> Do not enter sensitive personal information into a demo/portfolio application unless you understand how browser storage works.
-
 ---
 
 ## 🎯 Learning Objectives
