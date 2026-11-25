@@ -379,10 +379,6 @@ The application will open in your browser.
 
 ---
 
-
-
-
-
 ## 🔐 Privacy
 
 This is a frontend-only application.
@@ -472,8 +468,6 @@ The layout adapts to different screen sizes without requiring a separate mobile 
 The Student Marks Manager started as a simple marks-calculation concept and was developed into a more complete frontend application.
 
 It combines **JavaScript logic + DOM manipulation + browser APIs + responsive UI design** into one practical project.
-
-This makes it useful as a portfolio project for demonstrating frontend development fundamentals.
 
 ---
 
